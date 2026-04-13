@@ -1,0 +1,185 @@
+:root {
+  --text: #c7c7d1;
+  --text-h: #ffffff;
+  --bg: rgba(30, 29, 79, 0.6);
+
+  --panel: rgba(255, 255, 255, 0.06);
+  --card: rgba(255, 255, 255, 0.08);
+
+  --border: rgba(255, 255, 255, 0.12);
+  --code-bg: rgba(255, 255, 255, 0.05);
+
+  --accent: #b794f4;
+  --accent-bg: rgba(183, 148, 244, 0.15);
+
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* RESET + CENTRALIZAÇÃO REAL */
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg);
+}
+
+/* ROOT */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* APP CONTAINER (TRAVADO E ESTÁVEL) */
+.app-container {
+  width: 100%;
+  max-width: 900px;
+
+  max-height: 90vh; /* em vez de height fixo */
+  padding: 28px;    /* 👈 padding mais confortável */
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+
+  overflow: visible; /* 👈 IMPORTANTE: deixa o carrossel aparecer */
+}
+
+/* TITLE */
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-h);
+  margin: 0;
+}
+
+/* BOARD WRAPPER */
+.board-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  flex: 1;
+
+  overflow: visible; /* 👈 não corta o carrossel */
+}
+
+/* BOARD FIXO */
+.board {
+  display: flex;
+  gap: 12px;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  flex-wrap: nowrap;
+}
+
+/* COLUMN FIXA */
+.column {
+  flex: 0 0 260px;
+  width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* DELETE */
+.delete {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  gap: 10px;
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  outline: none;
+  flex: 1;
+  min-width: 220px;
+}
+
+.form button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* NAV BUTTON */
+.nav-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: fit-content;
+}
+
+.nav-btn:hover {
+  background: var(--accent-bg);
+}

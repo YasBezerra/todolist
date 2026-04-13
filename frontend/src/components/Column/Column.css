@@ -1,0 +1,13 @@
+.column {
+  min-width: 220px;
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.column h3 {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #0b1220;
+  color: var(--text);
+}
+
+.form button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
