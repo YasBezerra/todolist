@@ -1,4 +1,3 @@
-
 # To Do List
 
 Uma aplicação de lista de tarefas desenvolvida com **React + Node.js + Express + MySQL**, com interface moderna, carrossel de dias e atualização de status em tempo real.
@@ -91,7 +90,8 @@ git clone https://github.com/seu-usuario/todo-list
 
   <br/>
 
-  <img src="https://github.com/user-attachments/assets/bc8058f3-cb12-4951-84d6-17cb597a2d01"/>
+  <img src="https://github.com/user-attachments/assets/dc479ac9-4411-4f77-aa9a-8d070ccb4b0a"
+/>
 
 </details>
 
